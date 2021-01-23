@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de estudos</title>
+    <link rel = "stylesheet" type = "text/css" href = "Styles/Styles.css" />
+</head>
+<body>
+
+        <div class="container">
+    
+            <div class="column">
+                <p class="column-title">Tarefas</p>
+                <button class="button" id="btnAddToDO" onclick="generateToDoModal()">Adicionar nova tarefa</button>
+                <div id="toDoColumn">
+                    
+                </div>
+            </div>
+     
+            <div class="column">
+                <p class="column-title">Materiais para estudo</p>
+                <button class="button" id="btnAddMaterial" onclick="generateMaterialModal()">Adicionar novo material</button>
+                <div id="materialsColumn">
+    
+                </div>
+            </div>
+    
+            <div class="column">
+                <p class="column-title">Anotações</p>
+                <button class="button" id="btnAddAnnotation" onclick="generateAnnotationModal()">Adicionar nova anotação</button>
+                <div id="annotationsColumn">
+    
+                </div>
+            </div>
+    
+        </div>
+
+    <div class="modal" id="modals-container">
+
+    </div>
+
+</body>
+<script src="Scripts/Index.js"></script>
+</html>
