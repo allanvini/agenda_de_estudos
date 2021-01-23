@@ -4,6 +4,10 @@ body{
     background-color: rgb(238, 250, 255);
 }
 
+.menu{
+    display: none;
+}
+
 .container{
     font-family: Play;
     display: flex;
@@ -31,6 +35,7 @@ body{
     text-align: left;
     word-wrap: normal;
     padding: 10px;
+    margin-top: 10px;
     background-color: rgb(0, 120, 255);
     color: white;
     border-radius: 3px;
@@ -130,4 +135,55 @@ body{
 .modal-form div button{
     margin: 5px;
     margin-top: 10px;
+}
+
+
+
+
+
+
+
+@media (max-width: 850px){
+
+    .menu{
+        font-family: Play;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        text-align: center;
+        position: fixed;
+        float: left;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        color: white;
+        background-color: rgb(243, 59, 59);
+    }
+
+    .menu-button{
+        outline: none;
+        border: none;
+        border-bottom: solid 1px rgb(255,255,255);
+        background-color: rgb(243, 59, 59);
+        color: white;
+        height: 100%;
+        transition: 0.3s;
+    }
+    .menu-button:hover{
+        background-color: rgb(243, 82, 82);
+    }
+
+    .container{
+        display:block;
+        width: 100%;
+        margin-top: 60px;
+    }
+
+    .column{
+        display:none;
+        margin: 0;
+        width: 100%;
+        padding: 0;
+    }
 }

@@ -1,40 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agenda de estudos</title>
-    <link rel = "stylesheet" type = "text/css" href = "Styles/Styles.css" />
+    <link rel="stylesheet" type="text/css" href="Styles/Styles.css" />
 </head>
+
+
 <body>
 
+    <div class="dashboard">
+
+        <nav class="menu">
+            <button class="menu-button" id="btnShowToDoColumn" onclick="showToDoColumn()">Tarefas</button>
+            <button class="menu-button" id="btnShowMaterialsColumn" onclick="showMaterialsColumn()">Materiais</button>
+            <button class="menu-button" id="btnShowAnnotationsColumn" onclick="showAnnotationsColumn()">Anotações</button>
+        </nav>
+
         <div class="container">
-    
-            <div class="column">
+
+            <div id="toDoContainer" class="column">
                 <p class="column-title">Tarefas</p>
-                <button class="button" id="btnAddToDO" onclick="generateToDoModal()">Adicionar nova tarefa</button>
+                <button class="button" onclick="generateToDoModal()">Adicionar nova tarefa</button>
                 <div id="toDoColumn">
-                    
+    
                 </div>
             </div>
-     
-            <div class="column">
+    
+            <div id="materialsContainer" class="column">
                 <p class="column-title">Materiais para estudo</p>
-                <button class="button" id="btnAddMaterial" onclick="generateMaterialModal()">Adicionar novo material</button>
+                <button class="button" onclick="generateMaterialModal()">Adicionar novo
+                    material</button>
                 <div id="materialsColumn">
     
                 </div>
             </div>
     
-            <div class="column">
+            <div id="annotationsContainer" class="column">
                 <p class="column-title">Anotações</p>
-                <button class="button" id="btnAddAnnotation" onclick="generateAnnotationModal()">Adicionar nova anotação</button>
+                <button class="button" onclick="generateAnnotationModal()">Adicionar nova
+                    anotação</button>
                 <div id="annotationsColumn">
     
                 </div>
             </div>
     
         </div>
+    </div>
 
     <div class="modal" id="modals-container">
 
@@ -42,4 +56,5 @@
 
 </body>
 <script src="Scripts/Index.js"></script>
+
 </html>

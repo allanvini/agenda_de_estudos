@@ -6,6 +6,10 @@ let toDoColumn = document.getElementById("toDoColumn");
 let materialsColumn = document.getElementById("materialsColumn");
 let annotationsColumn = document.getElementById("annotationsColumn");
 
+let toDoContainer = document.getElementById("toDoContainer");
+let materialsContainer = document.getElementById("materialsContainer");
+let annotationsContainer =  document.getElementById("annotationsContainer");
+
 let modalsContainer = document.getElementById("modals-container");
 
 window.onload = ()=>{
@@ -219,4 +223,41 @@ function closeModal(){
 
 function enableModal(){
     modalsContainer.style.display="flex";
+}
+
+
+/**
+ * Mobile functions above
+ */
+
+let btnShowToDoColumn = document.getElementById("btnShowToDoColumn");
+let btnShowMaterialsColumn = document.getElementById("btnShowMaterialsColumn");
+let btnShowAnnotationsColumn = document.getElementById("btnShowAnnotationsColumn");
+
+function showToDoColumn(){
+    toDoContainer.style.display = "block";
+    materialsContainer.style.display = "none";
+    annotationsContainer.style.display = "none";
+    btnShowToDoColumn.style.backgroundColor = "rgb(243, 82, 82)";
+    btnShowMaterialsColumn.style.backgroundColor = "rgb(243, 59, 59)";
+    btnShowAnnotationsColumn.style.backgroundColor = "rgb(243, 59, 59)";
+
+}
+
+function showMaterialsColumn(){
+    toDoContainer.style.display = "none";
+    materialsContainer.style.display = "block";
+    annotationsContainer.style.display = "none";
+    btnShowToDoColumn.style.backgroundColor = "rgb(243, 59, 59)";
+    btnShowMaterialsColumn.style.backgroundColor = "rgb(243, 82, 82)";
+    btnShowAnnotationsColumn.style.backgroundColor = "rgb(243, 59, 59)";
+}
+
+function showAnnotationsColumn(){
+    toDoContainer.style.display = "none";
+    materialsContainer.style.display = "none";
+    annotationsContainer.style.display = "block";
+    btnShowToDoColumn.style.backgroundColor = "rgb(243, 59, 59)";
+    btnShowMaterialsColumn.style.backgroundColor = "rgb(243, 59, 59)";
+    btnShowAnnotationsColumn.style.backgroundColor = "rgb(243, 82, 82)";
 }
